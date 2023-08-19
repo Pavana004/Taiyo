@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import { useHistory, useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux';
-import { editContact } from '../redux/contactSlice';
-
+import { useDispatch, useSelector } from 'react-redux'
+import { editContact } from '../redux/contactSlice'
+import swal from "sweetalert2"
 
 
 
@@ -38,6 +38,7 @@ const EditCamp = () => {
             lastname:editValue.lastname,
             status:editValue.status
         }));
+        swal.fire("contact edit successfully");
         history.push("/");
 
     }
@@ -49,33 +50,36 @@ const EditCamp = () => {
                 <div className='w-full h-20 bg-slate-00 text-white font-bold text-center text-3xl mx-auto '>
                     <h6 className='flex w-32 mx-auto my-auto py-5 justify-center align-middle hover:text-gray-500 cursor-pointer'>Contacts</h6>
                 </div>
-                <div className=' w-2/4 h-96  bg-slate-200 mx-auto text-center text-2xl font-semibold my-10'>
-                  EDIT CONTACT SCREEN
+                <div className='w-56 h-10 bg-slate-500 flex justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
+                hover:font-semibold'>
+                    <button>EDIT CONTACT SCREEN</button> 
+                </div>
+                <div className=' w-full lg:w-2/4 xl:w-2/4 h-96   bg-slate-200 mx-auto text-center  font-semibold'>
                    <br/>
-                    <div className='flex mx-auto my-10 justify-center gap-3 text-xl font-semibold '>
-                        <h5 >First Name :</h5>
+                    <div className='flex mx-auto my-10 w-full  justify-center gap-3 text-sm md:text-base lg:text-xl xl:text-xl font-semibold'>
+                        <h5 className='my-auto' >First Name :</h5>
                         <span>
                             <input
                                 type='text'
                                 name='firstname'
                                 value={editValue.firstname}
                                 onChange={handleChange}
-                                className='shadow appearance-none border rounded w-60 h-10  text-center mx-auto text-base my-auto text-gray-700  focus:outline-none focus:shadow-outline' />
+                                className='shadow appearance-none border rounded w-28 md:w-60  lg:w-60 xl:w-60 h-6 lg:h-10 xl:h-10  text-center mx-auto text-base my-auto text-gray-700  focus:outline-none focus:shadow-outline' />
                         </span>
                     </div>
-                    <div className='flex mx-auto my-10 justify-center gap-3 text-xl font-semibold '>
-                        <h5>Last Name :</h5>
+                    <div className='flex mx-auto my-10 w-full  justify-center gap-3 text-sm md:text-base lg:text-xl xl:text-xl font-semibold'>
+                        <h5 className='my-auto'>Last Name :</h5>
                         <span>
                             <input
                                 type='text'
                                 name='lastname'
                                 value={editValue.lastname}
                                 onChange={handleChange}
-                                className='shadow appearance-none border rounded w-60  h-10  text-center mx-auto my-auto text-base focus:outline-none focus:shadow-outline' />
+                                className='shadow appearance-none border rounded w-28 md:w-60  lg:w-60 xl:w-60 h-6 lg:h-10 xl:h-10  text-center mx-auto text-base my-auto text-gray-700  focus:outline-none focus:shadow-outline' />
                         </span>
                     </div>
-                    <div className='flex mx-auto my-10 justify-center gap-3 text-xl font-semibold '>
-                        <h5>Status :</h5>
+                    <div className='flex mx-auto my-10 w-full  justify-center gap-3 text-sm md:text-base lg:text-xl xl:text-xl font-semibold'>
+                        <h5 className='my-auto'>Status :</h5>
                         <input
                             type='radio'
                             name='status'

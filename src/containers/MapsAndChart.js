@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import axios from "axios"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from 'recharts'
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet"
 import { Icon } from "leaflet"
 import loctionIcon from "../components/loct.png"
@@ -24,7 +24,6 @@ const MapsAndChart = () => {
 
                 const res = await axios.get("https://disease.sh/v3/covid-19/countries");
                 setChartData(res.data);
-                console.log(res.data);
             } catch (error) {
 
                 console.log(error)
@@ -46,12 +45,13 @@ const MapsAndChart = () => {
         <div className='flex'>
             <Sidebar />
             <div className='mx-auto w-screen bg-slate-700 h-20 '>
-                <div className='w-full h-20 text-white font-bold text-center text-2xl mx-auto '>
+                <div className='w-full md:w-full lg:w-full xl:w-full  h-20 text-white font-bold text-center text-2xl mx-auto '>
                     <h6 className='flex w-52  mx-auto my-auto py-5 justify-center align-middle hover:text-gray-500 cursor-pointer'>Chart And Maps</h6>
                 </div>
                 <div className='text-black flex m-5 justify-center'>
-                    <div className=''>
-                        <LineChart width={700} height={300} data={chartData}>
+                   
+                    <ResponsiveContainer width="80%" height={300}>
+                        <LineChart  data={chartData}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey={chartData.cases} />
                             <YAxis />
@@ -62,10 +62,11 @@ const MapsAndChart = () => {
                             <Line type="monotone" dataKey="deaths" stroke="#82ca9d" />
                             <Line type="monotone" dataKey="recovered" stroke="red" />
                         </LineChart>
-                    </div>
+                    </ResponsiveContainer>
+                  
                 </div>
-                <div className="flex m-5 justify-center ">
-                    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                <div className="flex m-5 justify-center">
+                    <MapContainer center={[51.505, -0.09]} zoom={5} scrollWheelZoom={false}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
