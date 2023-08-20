@@ -49,7 +49,7 @@ const InputCamp = () => {
            <div className='text-center text-sm md:text-base lg:text-2xl xl:text-xl font-bold '>
               Create Contact Screen
            </div>
-            <div className='w-full lg:w-2/4 xl:w-2/4 h-96   bg-slate-200 mx-auto text-center  font-semibold'>
+            <div className='w-full lg:w-2/4 xl:w-2/4 h-96 bg-slate-200 mx-auto text-center font-semibold'>
                 <br />
                 <div className='flex mx-auto my-10 w-full  justify-center gap-3 text-sm md:text-base lg:text-xl xl:text-xl font-semibold '>
                     <h5 className='my-auto' >First Name :</h5>
@@ -87,7 +87,7 @@ const InputCamp = () => {
                         onChange={handleChange} />Inactive
                 </div>
 
-                <div className='w-32 h-10 bg-slate-500 flex  text-lg justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
+                <div className='w-32 h-10 bg-slate-800 flex  text-lg justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
                 hover:font-semibold'>
                     <button onClick={handleSubmit}>Save Contact</button>
                 </div>

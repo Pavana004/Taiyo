@@ -46,11 +46,11 @@ const EditCamp = () => {
     return (
         <div className='flex'>
             <Sidebar />
-            <div className='mx-auto w-screen bg-slate-700 h-20 '>
-                <div className='w-full h-20 bg-slate-00 text-white font-bold text-center text-3xl mx-auto '>
+            <div className='mx-auto w-screen bg-slate-900 h-20 '>
+                <div className='w-full h-20 bg-slate-00 text-white font-bold text-center text-base md:text-xl lg:text-2xl xl:text-2xl mx-auto '>
                     <h6 className='flex w-32 mx-auto my-auto py-5 justify-center align-middle hover:text-gray-500 cursor-pointer'>Contacts</h6>
                 </div>
-                <div className='w-56 h-10 bg-slate-500 flex justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
+                <div className='w-56 h-10 bg-slate-800 flex justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
                 hover:font-semibold'>
                     <button>EDIT CONTACT SCREEN</button> 
                 </div>
@@ -92,7 +92,7 @@ const EditCamp = () => {
                             onChange={handleChange} />Inactive
                     </div>
 
-                    <div className='  w-48 h-10 bg-slate-500 flex  text-lg justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
+                    <div className='  w-48 h-10 bg-slate-800 flex  text-lg justify-center mx-auto my-10 font-bold rounded-sm text-white hover:bg-slate-800 
                 hover:font-semibold'>
                         <button onClick={handleEdit}>Save Editted Contact</button>
                     </div>

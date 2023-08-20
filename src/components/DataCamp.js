@@ -25,8 +25,8 @@ const DataCamp = () => {
             return (
               <div className=' flex items-center w-full md:w-full lg:w-full xl:w-full justify-evenly '>
                 <div className="  gap-1 h-40">
-                  <div className='w-60 md:w-full lg:w-full xl:w-full h-20 bg-slate-500 flex text-xs md:text-sm lg:text-base xl:text-base mx-auto py-6 px-6 md:px-6 lg:px-6 xl:px-6   gap-3 font-semibold text-white  ' key={data.id} >
-                    <h6  >FirstName:<br />{data.firstname}</h6>
+                  <div className='w-60 md:w-full lg:w-full xl:w-full h-20 bg-slate-800 flex text-xs md:text-sm lg:text-base xl:text-base mx-auto py-6 px-6 md:px-6 lg:px-6 xl:px-6   gap-3 font-semibold text-white  ' key={data.id} >
+                    <h6>FirstName:<br />{data.firstname}</h6>
                     <h6>LastName:<br />{data.lastname}</h6>
                     <h6>Stauts:<br />{data.status}</h6>
                   </div>
