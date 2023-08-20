@@ -14,7 +14,7 @@ const Contacts = () => {
         <div className='flex'>
             <Sidebar />
             <div className='mx-auto w-screen bg-slate-700 h-20 '>
-                <div className='w-full h-20 bg-slate-00 text-white font-bold text-center text-3xl mx-auto '>
+                <div className='w-full h-20 bg-slate-00 text-white font-bold text-center text-base md:text-2xl lg:text-3xl xl:text-3xl mx-auto '>
                     <h6 className='flex w-32 mx-auto my-auto py-5 justify-center align-middle hover:text-gray-500 cursor-pointer'>Contacts</h6>
                 </div>
 

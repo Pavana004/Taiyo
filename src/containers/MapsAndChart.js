@@ -45,7 +45,7 @@ const MapsAndChart = () => {
         <div className='flex'>
             <Sidebar />
             <div className='mx-auto w-screen bg-slate-700 h-20 '>
-                <div className='w-full md:w-full lg:w-full xl:w-full  h-20 text-white font-bold text-center text-2xl mx-auto '>
+                <div className='w-full md:w-full lg:w-full xl:w-full  h-20 text-white font-bold text-center text-sm md:text-2xl lg:text-2xl xl:text-2xl mx-auto '>
                     <h6 className='flex w-52  mx-auto my-auto py-5 justify-center align-middle hover:text-gray-500 cursor-pointer'>Chart And Maps</h6>
                 </div>
                 <div className='text-black flex m-5 justify-center'>
